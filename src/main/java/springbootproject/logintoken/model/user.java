@@ -1,21 +1,25 @@
 package springbootproject.logintoken.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 
-
-public class user {
+@Table
+public class User {
 	
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
 	private String username;
+	private String password;
 	
-	
-	public user() {
+	public User() {
 		
 		
 	}
@@ -44,6 +48,6 @@ public class user {
 		this.password = password;
 	}
 
-	private String password;
+	
 
 }
